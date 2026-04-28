@@ -1,10 +1,10 @@
 # spec-as-source
 
 ```text
- _______________________________________
-/ Only the specification will be edited \
-| by the human; the human should never  |
-\ touch the code.                       /
+ ______________________________________
+/ Only the spec will be edited by the   \
+| human; the human should never touch    |
+\ the code.                             /
  ---------------------------------------
         \   ^__^
          \  (oo)\_______
