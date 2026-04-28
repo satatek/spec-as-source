@@ -1,6 +1,6 @@
 # spec-as-source
 
- `
+```text
  _______________________________________
 / Only the specification will be edited \
 | by the human; the human should never  |
@@ -11,4 +11,4 @@
             (__)\       )\/\
                 ||----w |
                 ||     ||
-`
+```
