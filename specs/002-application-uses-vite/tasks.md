@@ -17,11 +17,11 @@
 
 **Purpose**: Project initialization and baseline tooling
 
-- [ ] T001 Initialize Node workspace and scripts in package.json
-- [ ] T002 Create backend and frontend base folders in backend/src/.gitkeep and frontend/src/.gitkeep
-- [ ] T003 [P] Configure Vite for vanilla frontend in frontend/vite.config.js
-- [ ] T004 [P] Configure root scripts for dev and test orchestration in package.json
-- [ ] T005 [P] Add baseline npm ignore and editor settings in .gitignore and .editorconfig
+- [X] T001 Initialize Node workspace and scripts in package.json
+- [X] T002 Create backend and frontend base folders in backend/src/.gitkeep and frontend/src/.gitkeep
+- [X] T003 [P] Configure Vite for vanilla frontend in frontend/vite.config.js
+- [X] T004 [P] Configure root scripts for dev and test orchestration in package.json
+- [X] T005 [P] Add baseline npm ignore and editor settings in .gitignore and .editorconfig
 
 ---
 
@@ -31,16 +31,16 @@
 
 **CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T006 Define SQLite schema and initialization SQL in backend/src/db/schema.sql
-- [ ] T007 Implement database bootstrap and connection helper in backend/src/db/database.js
-- [ ] T008 [P] Implement shared metadata validation utilities in backend/src/validation/metadata-validation.js
-- [ ] T009 [P] Implement shared API error envelope helper in backend/src/api/error-response.js
-- [ ] T010 Implement backend HTTP server entry and route mounting in backend/src/server.js
-- [ ] T011 [P] Implement frontend API client wrapper in frontend/src/services/api-client.js
-- [ ] T012 [P] Create base HTML shell and app mount in frontend/index.html
-- [ ] T013 [P] Create base frontend styling tokens and layout in frontend/src/styles.css
-- [ ] T014 Configure Vitest unit/integration setup in backend/tests/vitest.config.js
-- [ ] T015 Configure Playwright e2e setup in frontend/tests/playwright.config.js
+- [X] T006 Define SQLite schema and initialization SQL in backend/src/db/schema.sql
+- [X] T007 Implement database bootstrap and connection helper in backend/src/db/database.js
+- [X] T008 [P] Implement shared metadata validation utilities in backend/src/validation/metadata-validation.js
+- [X] T009 [P] Implement shared API error envelope helper in backend/src/api/error-response.js
+- [X] T010 Implement backend HTTP server entry and route mounting in backend/src/server.js
+- [X] T011 [P] Implement frontend API client wrapper in frontend/src/services/api-client.js
+- [X] T012 [P] Create base HTML shell and app mount in frontend/index.html
+- [X] T013 [P] Create base frontend styling tokens and layout in frontend/src/styles.css
+- [X] T014 Configure Vitest unit/integration setup in backend/tests/vitest.config.js
+- [X] T015 Configure Playwright e2e setup in frontend/tests/playwright.config.js
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -54,20 +54,20 @@
 
 ### Tests for User Story 1
 
-- [ ] T016 [P] [US1] Add contract tests for create/list endpoints in backend/tests/integration/metadata-create-list.contract.test.js
-- [ ] T017 [P] [US1] Add unit tests for metadata input validation in backend/tests/unit/metadata-validation.test.js
-- [ ] T018 [P] [US1] Add end-to-end test for add-and-refresh workflow in frontend/tests/e2e/metadata-create-refresh.spec.js
+- [X] T016 [P] [US1] Add contract tests for create/list endpoints in backend/tests/integration/metadata-create-list.contract.test.js
+- [X] T017 [P] [US1] Add unit tests for metadata input validation in backend/tests/unit/metadata-validation.test.js
+- [X] T018 [P] [US1] Add end-to-end test for add-and-refresh workflow in frontend/tests/e2e/metadata-create-refresh.spec.js
 
 ### Implementation for User Story 1
 
-- [ ] T019 [P] [US1] Implement metadata repository create/list operations in backend/src/models/metadata-repository.js
-- [ ] T020 [P] [US1] Implement tag repository upsert/link helpers in backend/src/models/tag-repository.js
-- [ ] T021 [US1] Implement metadata service create/list workflow in backend/src/services/metadata-service.js
-- [ ] T022 [US1] Implement POST and GET metadata routes in backend/src/api/metadata-routes.js
-- [ ] T023 [P] [US1] Implement metadata form component in frontend/src/components/metadata-form.js
-- [ ] T024 [P] [US1] Implement metadata list component in frontend/src/components/metadata-list.js
-- [ ] T025 [US1] Implement page bootstrap and submit/list wiring in frontend/src/pages/metadata-page.js
-- [ ] T026 [US1] Wire frontend app entrypoint to metadata page in frontend/src/main.js
+- [X] T019 [P] [US1] Implement metadata repository create/list operations in backend/src/models/metadata-repository.js
+- [X] T020 [P] [US1] Implement tag repository upsert/link helpers in backend/src/models/tag-repository.js
+- [X] T021 [US1] Implement metadata service create/list workflow in backend/src/services/metadata-service.js
+- [X] T022 [US1] Implement POST and GET metadata routes in backend/src/api/metadata-routes.js
+- [X] T023 [P] [US1] Implement metadata form component in frontend/src/components/metadata-form.js
+- [X] T024 [P] [US1] Implement metadata list component in frontend/src/components/metadata-list.js
+- [X] T025 [US1] Implement page bootstrap and submit/list wiring in frontend/src/pages/metadata-page.js
+- [X] T026 [US1] Wire frontend app entrypoint to metadata page in frontend/src/main.js
 
 **Checkpoint**: User Story 1 is fully functional and independently testable (MVP).
 
@@ -81,18 +81,18 @@
 
 ### Tests for User Story 2
 
-- [ ] T027 [P] [US2] Add contract tests for query filtering in backend/tests/integration/metadata-search.contract.test.js
-- [ ] T028 [P] [US2] Add unit tests for search query normalization in backend/tests/unit/metadata-search-normalization.test.js
-- [ ] T029 [P] [US2] Add end-to-end test for search and clear filters in frontend/tests/e2e/metadata-search.spec.js
+- [X] T027 [P] [US2] Add contract tests for query filtering in backend/tests/integration/metadata-search.contract.test.js
+- [X] T028 [P] [US2] Add unit tests for search query normalization in backend/tests/unit/metadata-search-normalization.test.js
+- [X] T029 [P] [US2] Add end-to-end test for search and clear filters in frontend/tests/e2e/metadata-search.spec.js
 
 ### Implementation for User Story 2
 
-- [ ] T030 [US2] Implement search query support in metadata repository list query in backend/src/models/metadata-repository.js
-- [ ] T031 [US2] Implement search orchestration in metadata service in backend/src/services/metadata-service.js
-- [ ] T032 [US2] Extend GET metadata route for q parameter in backend/src/api/metadata-routes.js
-- [ ] T033 [P] [US2] Implement search input component in frontend/src/components/metadata-search.js
-- [ ] T034 [US2] Integrate search component with page state and API calls in frontend/src/pages/metadata-page.js
-- [ ] T035 [US2] Update metadata list empty/filter states in frontend/src/components/metadata-list.js
+- [X] T030 [US2] Implement search query support in metadata repository list query in backend/src/models/metadata-repository.js
+- [X] T031 [US2] Implement search orchestration in metadata service in backend/src/services/metadata-service.js
+- [X] T032 [US2] Extend GET metadata route for q parameter in backend/src/api/metadata-routes.js
+- [X] T033 [P] [US2] Implement search input component in frontend/src/components/metadata-search.js
+- [X] T034 [US2] Integrate search component with page state and API calls in frontend/src/pages/metadata-page.js
+- [X] T035 [US2] Update metadata list empty/filter states in frontend/src/components/metadata-list.js
 
 **Checkpoint**: User Stories 1 and 2 are both independently testable.
 
@@ -106,18 +106,18 @@
 
 ### Tests for User Story 3
 
-- [ ] T036 [P] [US3] Add contract tests for update/delete endpoints in backend/tests/integration/metadata-update-delete.contract.test.js
-- [ ] T037 [P] [US3] Add unit tests for update payload validation in backend/tests/unit/metadata-update-validation.test.js
-- [ ] T038 [P] [US3] Add end-to-end test for edit and delete flows in frontend/tests/e2e/metadata-edit-delete.spec.js
+- [X] T036 [P] [US3] Add contract tests for update/delete endpoints in backend/tests/integration/metadata-update-delete.contract.test.js
+- [X] T037 [P] [US3] Add unit tests for update payload validation in backend/tests/unit/metadata-update-validation.test.js
+- [X] T038 [P] [US3] Add end-to-end test for edit and delete flows in frontend/tests/e2e/metadata-edit-delete.spec.js
 
 ### Implementation for User Story 3
 
-- [ ] T039 [US3] Implement metadata repository get/update/delete operations in backend/src/models/metadata-repository.js
-- [ ] T040 [US3] Implement update/delete service logic with updatedAt refresh in backend/src/services/metadata-service.js
-- [ ] T041 [US3] Implement GET by id, PUT, and DELETE metadata routes in backend/src/api/metadata-routes.js
-- [ ] T042 [P] [US3] Implement metadata row actions (edit/delete) in frontend/src/components/metadata-list-item-actions.js
-- [ ] T043 [US3] Integrate edit form state and delete confirmation flow in frontend/src/pages/metadata-page.js
-- [ ] T044 [US3] Add update/delete methods to frontend API client in frontend/src/services/api-client.js
+- [X] T039 [US3] Implement metadata repository get/update/delete operations in backend/src/models/metadata-repository.js
+- [X] T040 [US3] Implement update/delete service logic with updatedAt refresh in backend/src/services/metadata-service.js
+- [X] T041 [US3] Implement GET by id, PUT, and DELETE metadata routes in backend/src/api/metadata-routes.js
+- [X] T042 [P] [US3] Implement metadata row actions (edit/delete) in frontend/src/components/metadata-list-item-actions.js
+- [X] T043 [US3] Integrate edit form state and delete confirmation flow in frontend/src/pages/metadata-page.js
+- [X] T044 [US3] Add update/delete methods to frontend API client in frontend/src/services/api-client.js
 
 **Checkpoint**: All user stories are independently functional and testable.
 
@@ -127,10 +127,10 @@
 
 **Purpose**: Improvements across stories and readiness checks
 
-- [ ] T045 [P] Add accessibility labels and keyboard behavior improvements in frontend/src/pages/metadata-page.js
-- [ ] T046 [P] Add performance index and query optimization notes in backend/src/db/schema.sql
-- [ ] T047 Add quickstart command verification notes in specs/002-application-uses-vite/quickstart.md
-- [ ] T048 Run full quality suite script and document outcome in README.md
+- [X] T045 [P] Add accessibility labels and keyboard behavior improvements in frontend/src/pages/metadata-page.js
+- [X] T046 [P] Add performance index and query optimization notes in backend/src/db/schema.sql
+- [X] T047 Add quickstart command verification notes in specs/002-application-uses-vite/quickstart.md
+- [X] T048 Run full quality suite script and document outcome in README.md
 
 ---
 

@@ -1,8 +1,9 @@
 # Quickstart: Local Image Metadata Manager
 
 ## Prerequisites
-- Node.js 20+
+- Node.js 22+ (tested with Node 24 LTS)
 - npm 10+
+- `python3`, `make`, and a C++ compiler (for `better-sqlite3` native build)
 
 ## Setup
 1. Install dependencies for frontend and backend.
@@ -11,6 +12,9 @@
 
 ## Suggested Commands
 ```bash
+# (if using nvm, activate node first)
+# export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh"
+
 # install
 npm install
 

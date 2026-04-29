@@ -206,3 +206,33 @@ $ echo "Happy coding! (Or should I say, happy spec-ing?)" | figlet
 ---
 
 *Made with ❤️, ☕, and a healthy dose of curiosity about what happens when humans and AI actually work together instead of against each other.*
+
+---
+
+## Feature: Local Image Metadata Manager (`002-application-uses-vite`)
+
+A Vite-powered single-page application (vanilla HTML / CSS / JS) for managing local image metadata stored in SQLite.
+
+### Quality Suite
+
+| Suite | Runner | Command | Scope |
+|-------|--------|---------|-------|
+| Unit tests | Vitest | `npm run test:unit` | Validation helpers, normalisation logic |
+| Integration tests | Vitest | `npm run test:integration` | HTTP API contract tests with in-memory SQLite |
+| End-to-end tests | Playwright | `npm run test:e2e` | Full browser flows (create, search, edit, delete) |
+| All backend tests | Vitest | `npm test` | Unit + Integration combined |
+
+**Run the full quality suite:**
+
+```bash
+npm install
+npm run db:init
+npm test           # unit + integration
+npm run test:e2e   # e2e (requires both servers — starts automatically via webServer config)
+```
+
+### Architecture
+
+- **Frontend**: Vite dev server (port 5173) serving vanilla HTML/CSS/JS. Proxies `/api` → backend.
+- **Backend**: Minimal Node.js HTTP server (no framework, port 3001) with `better-sqlite3`.
+- **Storage**: SQLite database at `data/image-metadata.db`. No images are uploaded — only file paths and metadata.
