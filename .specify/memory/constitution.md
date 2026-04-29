@@ -1,50 +1,47 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: template → 1.0.0 (initial constitution adoption)
+Modified principles: All principles created from template
+Added sections: Code Quality, Testing Standards, User Experience Consistency, Performance Requirements, Quality Standards, Development Workflow
+Removed sections: Generic template placeholders
+Templates requiring updates: ✅ updated all templates during consistency check
+Follow-up TODOs: None
+-->
+
+# Spec-as-Source Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Code Quality Through Specification (NON-NEGOTIABLE)
+All code MUST be generated from specifications. Human developers MUST NOT directly edit implementation code. All quality requirements, coding standards, and architectural decisions MUST be expressed in specifications first. Generated code MUST adhere to industry best practices for the target language/framework. Specifications MUST be comprehensive enough to generate production-ready, maintainable code without manual intervention.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+**Rationale**: Ensures consistency, eliminates human error in implementation, and maintains single source of truth for all system behavior through specifications.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Comprehensive Testing Standards (NON-NEGOTIABLE)
+All specifications MUST include complete test definitions covering unit, integration, and end-to-end scenarios. Test specifications MUST be written before implementation specifications. Generated code MUST include 100% of specified test coverage. Performance benchmarks and acceptance criteria MUST be defined in specifications. All tests MUST pass before code deployment.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+**Rationale**: Test-first approach ensures specifications are complete and implementable while maintaining quality gates throughout the development lifecycle.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. User Experience Consistency
+All user-facing components MUST adhere to consistent design patterns defined in UX specifications. Interface specifications MUST include accessibility requirements (WCAG 2.1 AA minimum). User workflows MUST be optimized for efficiency and clarity. Generated UIs MUST provide consistent behavior across different platforms and browsers. Error handling and user feedback MUST follow standardized patterns.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+**Rationale**: Ensures professional, accessible, and predictable user experience across all generated applications and components.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. Performance Requirements
+All specifications MUST include explicit performance criteria including response times, throughput, and resource utilization limits. Generated code MUST meet or exceed specified performance benchmarks. Performance tests MUST be included in the testing specifications. Database queries and API calls MUST be optimized according to specified performance targets. Scalability requirements MUST be clearly defined and verifiable.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+**Rationale**: Ensures generated systems meet production performance standards and can scale according to business requirements.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Quality Standards
+
+Code generation pipelines MUST validate specifications for completeness and consistency before generating implementation code. All generated artifacts MUST pass automated quality checks including linting, security scanning, and dependency analysis. Code reviews MUST focus on specification quality rather than implementation details. Documentation MUST be generated automatically from specifications and kept in sync with all code changes.
+
+## Development Workflow
+
+Specifications are the primary development artifact. All changes begin with specification updates followed by regeneration of implementation code. Feature branches MUST contain only specification changes, not implementation code. Pull requests MUST demonstrate that generated code meets all specified requirements through automated testing. Deployment MUST be fully automated based on successful specification validation and test execution.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices. Amendments require unanimous team approval, documentation of rationale, and migration plan for existing specifications. All code reviews, architectural decisions, and quality assessments MUST verify compliance with these principles. Violations MUST be addressed by updating specifications rather than manual code fixes. Use `.github/copilot-instructions.md` for runtime development guidance and specification writing best practices.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-04-29 | **Last Amended**: 2026-04-29
