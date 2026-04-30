@@ -1,0 +1,27 @@
+{
+  "name": "image-metadata-manager",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "node backend/src/server.js",
+    "dev:frontend": "vite --config frontend/vite.config.js",
+    "db:init": "node backend/src/db/init.js",
+    "build": "vite build --config frontend/vite.config.js",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "vitest run --config backend/tests/vitest.config.js --reporter=verbose",
+    "test:integration": "vitest run --config backend/tests/vitest.config.js --reporter=verbose integration",
+    "test:e2e": "playwright test --config frontend/tests/playwright.config.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@vitejs/plugin-legacy": "^5.4.1",
+    "concurrently": "^8.2.2",
+    "vite": "^5.2.12",
+    "vitest": "^1.6.0"
+  }
+}
